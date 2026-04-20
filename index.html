@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 
 <html lang="zh-CN">
-<head><meta content="default-src 'none'; style-src * 'unsafe-inline'; script-src * 'unsafe-inline'; img-src * data: blob:; font-src * data:; media-src * data: blob:; connect-src 'none'; form-action 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'" http-equiv="Content-Security-Policy"/>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>一季度经营分析汇报 - 郑超</title>
 
-<script src="https://image.uc.cn/s/uae/g/3n/mos-production/fontawesome-free-7.1.0-web/js/all.min.js"></script>
+<head>
+    <meta
+        content="default-src 'none'; style-src * 'unsafe-inline'; script-src * 'unsafe-inline'; img-src * data: blob:; font-src * data:; media-src * data: blob:; connect-src 'none'; form-action 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'"
+        http-equiv="Content-Security-Policy" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>一季度经营分析汇报 - 郑超</title>
 
-<script src="https://image.uc.cn/s/uae/g/3n/mos-production/0915/3.4.17.js"></script>
+    <script src="https://image.uc.cn/s/uae/g/3n/mos-production/fontawesome-free-7.1.0-web/js/all.min.js"></script>
 
-<script src="https://image.uc.cn/s/uae/g/3n/mos-production/0915/echarts.min.js"></script>
-<style>
+    <script src="https://image.uc.cn/s/uae/g/3n/mos-production/0915/3.4.17.js"></script>
+
+    <script src="https://image.uc.cn/s/uae/g/3n/mos-production/0915/echarts.min.js"></script>
+    <style>
         /* 自定义CSS使用BEM命名法避免冲突 */
         .presentation__particles {
             position: fixed;
@@ -22,7 +26,7 @@
             z-index: -1;
             pointer-events: none;
         }
-        
+
         .presentation__glass-card {
             background: rgba(30, 41, 59, 0.7);
             backdrop-filter: blur(10px);
@@ -31,13 +35,13 @@
             border-radius: 16px;
             transition: all 0.3s ease;
         }
-        
+
         .presentation__glass-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
             border-color: rgba(255, 255, 255, 0.2);
         }
-        
+
         .presentation__slide {
             min-height: 100vh;
             padding-top: 80px;
@@ -46,12 +50,12 @@
             transform: translateY(20px);
             transition: opacity 0.8s ease, transform 0.8s ease;
         }
-        
+
         .presentation__slide.active {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         .presentation__navigation-dot {
             width: 12px;
             height: 12px;
@@ -60,37 +64,37 @@
             transition: all 0.3s ease;
             cursor: pointer;
         }
-        
+
         .presentation__navigation-dot.active {
             background: #3b82f6;
             transform: scale(1.3);
         }
-        
+
         .presentation__navigation-dot:hover {
             background: #60a5fa;
         }
-        
+
         .presentation__progress-bar {
             height: 4px;
             background: rgba(59, 130, 246, 0.3);
             border-radius: 2px;
             overflow: hidden;
         }
-        
+
         .presentation__progress-fill {
             height: 100%;
             background: #3b82f6;
             width: 0%;
             transition: width 0.3s ease;
         }
-        
+
         .presentation__chart-container {
             background: rgba(15, 23, 42, 0.5);
             border-radius: 12px;
             padding: 20px;
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        
+
         /* 响应式调整 */
         @media (max-width: 768px) {
             .presentation__slide {
@@ -98,23 +102,24 @@
                 padding-bottom: 60px;
             }
         }
-        
+
         /* 动画效果 */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         .presentation__animate-fadeInUp {
             animation: fadeInUp 0.8s ease forwards;
         }
-        
+
         /* 键盘导航提示 */
         .presentation__key-hint {
             background: rgba(30, 41, 59, 0.8);
@@ -128,721 +133,759 @@
             gap: 6px;
         }
     </style>
-<script>
-!(function(j,a,g){j.__itrace_conf = {bid: 'kt40h0wl-koyh4af8',rel: '', uid: '42ff5bb6-2b20-426a-afed-ab8baf95a17f' ,  spa: true, plugins:['jserror','interface','perf','resource','flow','blank']};var b = a.createElement("script");var d = a.getElementsByTagName("script")[0];b.type = "text/javascript";b.crossorigin = true;b.async = true;b.onload = function(){j.__itrace && j.__itrace.setReady()};d.parentNode.insertBefore(b,d);b.src = g})(window, document, "https://g.alicdn.com/woodpeckerx/itrace-next/itrace.iife.js")
-</script>
+    <script>
+        !(function (j, a, g) { j.__itrace_conf = { bid: 'kt40h0wl-koyh4af8', rel: '', uid: '42ff5bb6-2b20-426a-afed-ab8baf95a17f', spa: true, plugins: ['jserror', 'interface', 'perf', 'resource', 'flow', 'blank'] }; var b = a.createElement("script"); var d = a.getElementsByTagName("script")[0]; b.type = "text/javascript"; b.crossorigin = true; b.async = true; b.onload = function () { j.__itrace && j.__itrace.setReady() }; d.parentNode.insertBefore(b, d); b.src = g })(window, document, "https://g.alicdn.com/woodpeckerx/itrace-next/itrace.iife.js")
+    </script>
 </head>
+
 <body class="bg-slate-900 text-slate-100 font-sans overflow-x-hidden">
 
-<canvas class="presentation__particles" id="particlesCanvas"></canvas>
+    <canvas class="presentation__particles" id="particlesCanvas"></canvas>
 
-<div class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-sm">
-<div class="presentation__progress-bar mx-4 md:mx-8 mt-4">
-<div class="presentation__progress-fill" id="progressFill"></div>
-</div>
-<div class="flex justify-between items-center px-4 md:px-8 py-3">
-<div class="text-slate-300 text-sm">
-<i class="fas fa-chart-line mr-2 text-blue-400"></i>
+    <div class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-sm">
+        <div class="presentation__progress-bar mx-4 md:mx-8 mt-4">
+            <div class="presentation__progress-fill" id="progressFill"></div>
+        </div>
+        <div class="flex justify-between items-center px-4 md:px-8 py-3">
+            <div class="text-slate-300 text-sm">
+                <i class="fas fa-chart-line mr-2 text-blue-400"></i>
                 一季度经营分析汇报
             </div>
             <div class="flex items-center gap-4">
-<div class="flex items-center gap-3">
-<img src="https://www.sxzhihui.com/static/img/logo.b75fefbd.png" alt="公司logo1" class="w-16 h-10 object-contain">
-<img src="image.png" alt="公司logo2" class="w-16 h-10 object-contain">
-</div>
-<!-- <div class="text-slate-400 text-sm">
+                <div class="flex items-center gap-3">
+                    <img src="https://www.sxzhihui.com/static/img/logo.b75fefbd.png" alt="公司logo1"
+                        class="w-16 h-10 object-contain">
+                    <img src="image.png" alt="公司logo2" class="w-16 h-10 object-contain">
+                </div>
+                <!-- <div class="text-slate-400 text-sm">
                 汇报人: <span class="text-blue-300 font-medium">郑超</span>
 </div> -->
-</div>
-</div>
-</div>
-
-<div class="fixed right-6 top-1/2 transform -translate-y-1/2 z-40 flex flex-col gap-3">
-<div class="presentation__navigation-dot active" data-slide="0" title="封面"></div>
-<div class="presentation__navigation-dot" data-slide="1" title="核心工作"></div>
-<div class="presentation__navigation-dot" data-slide="2" title="主要问题"></div>
-<div class="presentation__navigation-dot" data-slide="3" title="经营指标"></div>
-<div class="presentation__navigation-dot" data-slide="4" title="业务商机"></div>
-<div class="presentation__navigation-dot" data-slide="5" title="工作计划"></div>
-<div class="presentation__navigation-dot" data-slide="6" title="协调支持"></div>
-<div class="presentation__navigation-dot" data-slide="7" title="结论"></div>
-</div>
-
-<div class="fixed bottom-6 left-6 z-40 hidden md:block">
-<div class="presentation__key-hint">
-<i class="fas fa-keyboard"></i>
-<span>← → 导航 | Space 播放/暂停</span>
-</div>
-</div>
-
-<div id="slidesContainer">
-
-<section class="presentation__slide active flex items-center justify-center px-4 md:px-8" id="slide0">
-<div class="max-w-4xl w-full text-center">
-<div class="presentation__glass-card p-8 md:p-12 mb-8 border border-blue-500/20">
-<h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
-                        一季度经营分析汇报
-                    </h1>
-                     <br>
-<div class="h-1 w-32 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto my-8 rounded-full"></div>
- <br>
-<p class="text-2xl md:text-3xl text-slate-300 mb-4">
-                        2026年第二季度规划
-                    </p>
-<div class="mt-10 pt-6 border-t border-slate-700">
-<p class="text-xl text-slate-400">
-<i class="fas fa-user-tie mr-2 text-blue-400"></i>
-                            汇报人: <span class="text-blue-300 font-bold text-2xl">郑超</span>
-</p>
-<p class="text-slate-500 mt-2 text-sm">
-     <br>
-<i class="far fa-calendar mr-1"></i>
-                            2026年4月18日
-                        </p>
-</div>
-</div>
-<div class="mt-8 text-slate-500 text-sm animate-pulse">
-<i class="fas fa-chevron-down mr-2"></i>
-                    滚动或使用方向键继续
-                </div>
-</div>
-</section>
-
-<section class="presentation__slide px-4 md:px-8" id="slide1">
-     <br> <br> <br> <br> <br>
-<div class="max-w-6xl mx-auto">
-<div class="text-center mb-12">
-<h2 class="text-3xl md:text-4xl font-bold mb-4">
-<i class="fas fa-tasks text-blue-400 mr-3"></i>
-                        一季度核心工作完成情况
-                    </h2>
-<p class="text-slate-400 max-w-3xl mx-auto">
-                        产融事业部、数据产品部及团队建设在一季度取得阶段性成果
-                    </p>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
-
-<div class="presentation__glass-card p-6 border-l-4 border-blue-500">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 rounded-lg bg-blue-900/50 flex items-center justify-center mr-4">
-<i class="fas fa-handshake text-2xl text-blue-400"></i>
-</div>
-<h3 class="font-bold text-xl text-slate-200">产融事业部</h3>
-</div>
-<ul class="space-y-3 text-slate-300">
-<li class="flex items-start">
-<i class="fas fa-check text-green-400 mt-1 mr-3"></i>
-<span style="color: orange;">龙江航空项目：云上文旅合作已完成签约</span>
-</li>
-<li class="flex items-start">
-<i class="fas fa-check text-green-400 mt-1 mr-3"></i>
-<span>西安文旅项目：参加26年数据采购初次申报评审</span>
-</li>
-<li class="flex items-start">
-<i class="fas fa-check text-green-400 mt-1 mr-3"></i>
-<span>山西华阳项目：上下游验收已完成</span>
-</li>
-<li class="flex items-start">
-<i class="fas fa-check text-green-400 mt-1 mr-3"></i>
-<span style="color: orange;">星际数科项目：跨部门协同顺利结项</span>
-</li>
-<li class="flex items-start">
-<i class="fas fa-check text-green-400 mt-1 mr-3"></i>
-<span>渠道线索挖掘：搜集美团、携程有效线索70条</span>
-</li>
-<li class="flex items-start">
-<i class="fas fa-check text-green-400 mt-1 mr-3"></i>
-<span>可信数据空间联动：与业务拓展深度绑定</span>
-</li>
-</ul>
-</div>
-
-<div class="presentation__glass-card p-6 border-l-4 border-purple-500">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 rounded-lg bg-purple-900/50 flex items-center justify-center mr-4">
-<i class="fas fa-database text-2xl text-purple-400"></i>
-</div>
-<h3 class="font-bold text-xl text-slate-200">数据产品部</h3>
-</div>
-<ul class="space-y-3 text-slate-300">
-<li class="flex items-start">
-<i class="fas fa-check text-green-400 mt-1 mr-3"></i>
-<span>三大平台交接与运维：完成基础信息交接，并开展相关运营运维业务</span>
-</li>
-<li class="flex items-start">
-<i class="fas fa-check text-green-400 mt-1 mr-3"></i>
-<span style="color: orange;">可信数据空间：各生态注册入驻、产品登记证书更新、工商银行可信数据空间技术对接及场景设计</span>
-</li>
-<li class="flex items-start">
-<i class="fas fa-check text-green-400 mt-1 mr-3"></i>
-<span>数据资产运营交易平台：支撑西安银行授信、东亚银行授信及跑通对接并上线使用</span>
-</li>
-<li class="flex items-start">
-<i class="fas fa-check text-green-400 mt-1 mr-3"></i>
-<span style="color: orange;">非遗高质量数据集：完成8个作品非遗项目的数据采集、分析、初步标注</span>
-</li>
-<li class="flex items-start">
-<i class="fas fa-check text-green-400 mt-1 mr-3"></i>
-<span>材料输出：提供多项业务材料输出</span>
-</li>
-</ul>
-</div>
-
-<div class="presentation__glass-card p-6 border-l-4 border-green-500">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 rounded-lg bg-green-900/50 flex items-center justify-center mr-4">
-<i class="fas fa-users text-2xl text-green-400"></i>
-</div>
-<h3 class="font-bold text-xl text-slate-200">团队建设</h3>
-</div>
-<div class="space-y-4">
-<div>
-<h4 class="font-semibold text-slate-300 mb-2">产融事业部</h4>
-<p class="text-slate-300 pl-2">
-<i class="fas fa-user-plus text-blue-400 mr-2"></i>
-                                    新增1名成员，已完成分工安排与业务培训
-                                </p>
-</div>
-<div>
-<h4 class="font-semibold text-slate-300 mb-2">数据产品部</h4>
-<p class="text-slate-300 pl-2">
-<i class="fas fa-user-plus text-blue-400 mr-2"></i>
-                                    新增2名成员，职责分工明确，完成产品培训
-                                </p>
-</div>
-<div class="pt-3 border-t border-slate-700">
-<p class="text-slate-400 text-sm">
-<i class="fas fa-lightbulb text-yellow-400 mr-1"></i>
-                                    团队新架构已进入正式业务开展阶段
-                                </p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="presentation__slide px-4 md:px-8 bg-slate-800/30" id="slide2">
-     <br> <br> <br> <br> <br>
-<div class="max-w-7xl mx-auto">
-<div class="text-center mb-12">
-<h2 class="text-3xl md:text-4xl font-bold mb-4">
-<i class="fas fa-exclamation-triangle text-orange-400 mr-3"></i>
-                        一季度主要问题与挑战
-                    </h2>
-<p class="text-slate-400 max-w-3xl mx-auto">
-                        六大核心挑战
-                    </p>
-</div>
-
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-<div class="presentation__glass-card p-6 border-l-4 border-orange-500">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 rounded-lg bg-orange-900/50 flex items-center justify-center mr-4">
-<i class="fas fa-sync-alt text-2xl text-orange-400"></i>
-</div>
-<h3 class="font-bold text-xl text-slate-200">组织架构调整</h3>
-</div>
-<p class="text-slate-300 leading-relaxed">
-                            组织架构调整导致原有业绩及大部分资源流失，团队需重建业务基础，虽具备多次初创团队经验，但仍面临较大压力。
-                        </p>
-</div>
-
-<div class="presentation__glass-card p-6 border-l-4 border-yellow-500">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 rounded-lg bg-yellow-900/50 flex items-center justify-center mr-4">
-<i class="fas fa-users text-2xl text-yellow-400"></i>
-</div>
-<h3 class="font-bold text-xl text-slate-200">全新团队需快速成长</h3>
-</div>
-<p class="text-slate-300 leading-relaxed">
-                            团队全员为新人，业务岗仅1人，尚未形成作战能力，短期内难以独立承担复杂项目执行。
-                        </p>
-</div>
-
-<div class="presentation__glass-card p-6 border-l-4 border-red-500">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 rounded-lg bg-red-900/50 flex items-center justify-center mr-4">
-<i class="fas fa-money-bill-wave text-2xl text-red-400"></i>
-</div>
-<h3 class="font-bold text-xl text-slate-200">资金使用挑战</h3>
-</div>
-<p class="text-slate-300 leading-relaxed">
-                            产融业务处于脱核过渡期，脱离云创后使用难度较大，外部资金引入则会稀释利润。
-                        </p>
-</div>
-
-<div class="presentation__glass-card p-6 border-l-4 border-purple-500">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 rounded-lg bg-purple-900/50 flex items-center justify-center mr-4">
-<i class="fas fa-cloud text-2xl text-purple-400"></i>
-</div>
-<h3 class="font-bold text-xl text-slate-200">高度依赖云创平台</h3>
-</div>
-<p class="text-slate-300 leading-relaxed">
-                            信息/数字化业务高度依赖云创技术平台，跨公司协调资源难度持续加大，影响项目响应效率与自主性。
-                        </p>
-</div>
-
-<div class="presentation__glass-card p-6 border-l-4 border-blue-500">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 rounded-lg bg-blue-900/50 flex items-center justify-center mr-4">
-<i class="fas fa-project-diagram text-2xl text-blue-400"></i>
-</div>
-<h3 class="font-bold text-xl text-slate-200">缺乏协同机制</h3>
-</div>
-<p class="text-slate-300 leading-relaxed">
-                            内部协同机制缺失，多部门共同参与项目无业绩分享制度，贡献难以量化，影响协作积极性。
-                        </p>
-</div>
-
-<div class="presentation__glass-card p-6 border-l-4 border-gray-500">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 rounded-lg bg-gray-900/50 flex items-center justify-center mr-4">
-<i class="fas fa-user-clock text-2xl text-gray-400"></i>
-</div>
-<h3 class="font-bold text-xl text-slate-200">个人精力不足</h3>
-</div>
-<p class="text-slate-300 leading-relaxed">
-                            个人需同时兼顾290万业绩目标及平台/数据运营双重职责，精力严重分散，难以全面兼顾各项任务。
-                        </p>
-</div>
-</div>
-<div class="mt-10 text-center text-slate-500 text-sm">
-<i class="fas fa-info-circle mr-2"></i>
-                    汇报人:郑超
-                </div>
-</div>
-</section>
-
-<section class="presentation__slide px-4 md:px-8" id="slide3">
-     <br> 
-<div class="max-w-6xl mx-auto">
-<div class="text-center mb-12">
-<h2 class="text-3xl md:text-4xl font-bold mb-4">
-<i class="fas fa-bullseye text-green-400 mr-3"></i>
-                        二季度核心经营指标
-                    </h2>
-<p class="text-slate-400 max-w-3xl mx-auto">
-                        基于当前业务状况设定的关键绩效目标
-                    </p>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
-
-<div class="presentation__glass-card p-8 text-center">
-<div class="w-20 h-20 rounded-full bg-green-900/50 flex items-center justify-center mx-auto mb-6">
-<i class="fas fa-chart-line text-3xl text-green-400"></i>
-</div>
-<h3 class="text-2xl font-bold text-slate-200 mb-2">毛利目标</h3>
-<div class="text-4xl font-bold text-green-400 mb-4">145万元</div>
-<p class="text-slate-400">核心考核指标，任务过半</p>
-</div>
-
-<div class="presentation__glass-card p-8 text-center">
-<div class="w-20 h-20 rounded-full bg-blue-900/50 flex items-center justify-center mx-auto mb-6">
-<i class="fas fa-money-bill-wave text-3xl text-blue-400"></i>
-</div>
-<h3 class="text-2xl font-bold text-slate-200 mb-2">收入目标</h3>
-<div class="text-4xl font-bold text-blue-400 mb-4">500万元</div>
-<p class="text-slate-400">总体收入要求</p>
-</div>
-
-<div class="presentation__glass-card p-8 text-center">
-<div class="w-20 h-20 rounded-full bg-amber-900/50 flex items-center justify-center mx-auto mb-6">
-<i class="fas fa-calculator text-3xl text-amber-400"></i>
-</div>
-<h3 class="text-2xl font-bold text-slate-200 mb-2">预计可实现毛利</h3>
-<div class="text-4xl font-bold text-amber-400 mb-4">30-70万元</div>
-<p class="text-slate-400">基于当前商机测算</p>
-</div>
-</div>
-
-<div class="presentation__glass-card p-6 mb-8">
-<div class="flex flex-col md:flex-row items-center justify-between mb-6">
-<div>
-<h3 class="text-xl font-bold text-slate-200 mb-2">毛利缺口分析</h3>
-<p class="text-slate-400">基于当前商机测算，存在约 <span class="text-red-400 font-bold">75-120万元缺口</span></p>
-</div>
-<div class="mt-4 md:mt-0">
-<div class="flex items-center gap-4">
-<div class="flex items-center">
-<div class="w-4 h-4 bg-green-500 rounded mr-2"></div>
-<span class="text-sm text-slate-400">预计实现</span>
-</div>
-<div class="flex items-center">
-<div class="w-4 h-4 bg-red-500 rounded mr-2"></div>
-<span class="text-sm text-slate-400">缺口</span>
-</div>
-</div>
-</div>
-</div>
-<div class="presentation__chart-container">
-<div id="profitGapChart" style="height: 300px;"></div>
-</div>
-</div>
-<div class="presentation__glass-card p-6 border-l-4 border-red-500">
-<div class="flex items-start">
-<i class="fas fa-exclamation-circle text-red-400 text-xl mt-1 mr-4"></i>
-<div>
-<p class="text-slate-300">
-                                在理想情况下（资金匹配、审批通过），所有储备项目均可落地，预计实现毛利70万元。悲观情况下预计完成20万元毛利。
-                                <span class="font-bold text-red-300">仍需团队持续挖掘新商机以填补75万元毛利缺口。</span>
-</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="presentation__slide px-4 md:px-8 bg-slate-800/30" id="slide4">
-     <br> <br>
-<div class="max-w-6xl mx-auto">
-<div class="text-center mb-12">
-<h2 class="text-3xl md:text-4xl font-bold mb-4">
-<i class="fas fa-briefcase text-cyan-400 mr-3"></i>
-                        二季度业务商机一览表
-                    </h2>
-<p class="text-slate-400 max-w-3xl mx-auto">
-                        现有储备项目数量充足，转化速度是关键瓶颈
-                    </p>
-</div>
-<div class="presentation__glass-card p-6 mb-8 overflow-x-auto">
-<table class="w-full text-slate-300">
-<thead>
-<tr class="border-b border-slate-700">
-<th class="py-4 px-4 text-left font-semibold">项目名称</th>
-<th class="py-4 px-4 text-left font-semibold">项目类型</th>
-<th class="py-4 px-4 text-left font-semibold">资金需求</th>
-<th class="py-4 px-4 text-left font-semibold">项目预计总收入/利润</th>
-<th class="py-4 px-4 text-left font-semibold">预计二季度收入</th>
-<th class="py-4 px-4 text-left font-semibold">二季度毛利</th>
-</tr>
-</thead>
-<tbody>
-<tr class="border-b border-slate-800 hover:bg-slate-800/50 transition-colors">
-<td class="py-4 px-4 font-medium">云上-龙江项目</td>
-<td class="py-4 px-4">
-<span class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm">存量项目</span>
-</td>
-<td class="py-4 px-4">/</td>
-<td class="py-4 px-4">120万/60万</td>
-<td class="py-4 px-4">25万</td>
-<td class="py-4 px-4 font-bold text-green-400">15万</td>
-</tr>
-<tr class="border-b border-slate-800 hover:bg-slate-800/50 transition-colors">
-<td class="py-4 px-4 font-medium">山西华阳</td>
-<td class="py-4 px-4">
-<span class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm">存量项目</span>
-</td>
-<td class="py-4 px-4">/</td>
-<td class="py-4 px-4">3326.5万/40万</td>
-<td class="py-4 px-4">1380.5万</td>
-<td class="py-4 px-4 font-bold text-green-400">20万</td>
-</tr>
-<tr class="border-b border-slate-800 hover:bg-slate-800/50 transition-colors">
-<td class="py-4 px-4 font-medium">景区酒店场景</td>
-<td class="py-4 px-4">
-<span class="px-3 py-1 bg-amber-900/50 text-amber-300 rounded-full text-sm">储备</span>
-</td>
-<td style="color: red;" class="py-4 px-4">5000万</td>
-<td class="py-4 px-4">300万/150万</td>
-<td class="py-4 px-4">80万</td>
-<td class="py-4 px-4 font-bold text-amber-400">20万</td>
-</tr>
-<tr class="border-b border-slate-800 hover:bg-slate-800/50 transition-colors">
-<td class="py-4 px-4 font-medium">航空出行场景</td>
-<td class="py-4 px-4">
-<span class="px-3 py-1 bg-amber-900/50 text-amber-300 rounded-full text-sm">储备</span>
-</td>
-<td style="color: red;" class="py-4 px-4">5000万</td>
-<td class="py-4 px-4">300万/150万</td>
-<td class="py-4 px-4">80万</td>
-<td class="py-4 px-4 font-bold text-amber-400">20万</td>
-</tr>
-<tr class="border-b border-slate-800 hover:bg-slate-800/50 transition-colors">
-<td class="py-4 px-4 font-medium">西安市文旅局提升项目-优化需求</td>
-<td class="py-4 px-4">
-<span class="px-3 py-1 bg-amber-900/50 text-amber-300 rounded-full text-sm">储备</span>
-</td>
-<td class="py-4 px-4">/</td>
-<td class="py-4 px-4">10万/7万</td>
-<td class="py-4 px-4">5万</td>
-<td class="py-4 px-4 font-bold text-amber-400">5万</td>
-</tr>
-<tr class="border-b border-slate-800 hover:bg-slate-800/50 transition-colors">
-<td class="py-4 px-4 font-medium">新疆博观模型合作</td>
-<td class="py-4 px-4">
-<span class="px-3 py-1 bg-amber-900/50 text-amber-300 rounded-full text-sm">储备</span>
-</td>
-<td class="py-4 px-4">/</td>
-<td class="py-4 px-4">35万/10万</td>
-<td class="py-4 px-4">5万</td>
-<td class="py-4 px-4 font-bold text-amber-400">5万</td>
-</tr>
-<tr class="border-b border-slate-800 hover:bg-slate-800/50 transition-colors">
-<td class="py-4 px-4 font-medium">出行+AI+文旅项目</td>
-<td class="py-4 px-4">
-<span class="px-3 py-1 bg-amber-900/50 text-amber-300 rounded-full text-sm">储备</span>
-</td>
-<td class="py-4 px-4">/</td>
-<td class="py-4 px-4">/</td>
-<td class="py-4 px-4">/</td>
-<td class="py-4 px-4">/</td>
-</tr>
-<tr class="hover:bg-slate-800/50 transition-colors">
-<td class="py-4 px-4 font-medium">挖掘豆荚合作</td>
-<td class="py-4 px-4">
-<span class="px-3 py-1 bg-amber-900/50 text-amber-300 rounded-full text-sm">储备</span>
-</td>
-<td class="py-4 px-4">/</td>
-<td class="py-4 px-4">/</td>
-<td class="py-4 px-4">/</td>
-<td class="py-4 px-4">/</td>
-</tr>
-<tr class="hover:bg-slate-800/50 transition-colors">
-<td class="py-4 px-4 font-medium">拓展未知商机</td>
-<td class="py-4 px-4">
-<span class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm">新商机</span>
-</td>
-<td class="py-4 px-4">/</td>
-<td class="py-4 px-4">/</td>
-<td class="py-4 px-4">/</td>
-<td class="py-4 px-4">10</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="presentation__glass-card p-6 border-l-4 border-cyan-500">
-<div class="flex items-start">
-<i class="fas fa-chart-bar text-cyan-400 text-xl mt-1 mr-4"></i>
-<div>
-<h4 class="font-bold text-slate-200 mb-2">商机分析摘要</h4>
-<p class="text-slate-300">
-                                现有储备项目数量充足，但转化速度是关键瓶颈。需加快存量项目交付节奏，推动储备项目尽快落地签约，重点突破"景区酒店场景"、"航空出行场景"等高潜力方向，力争填补75万元毛利缺口。
-                            </p>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="presentation__slide px-4 md:px-8" id="slide5">
-    <br> <br> <br> <br> <br> <br>
-<div class="max-w-6xl mx-auto">
-<div class="text-center mb-12">
-<h2 class="text-3xl md:text-4xl font-bold mb-4">
-<i class="fas fa-clipboard-list text-purple-400 mr-3"></i>
-                        二季度重点工作计划
-                    </h2>
-<p class="text-slate-400 max-w-3xl mx-auto">
-                        数据产品部将聚焦六大核心任务，围绕目标达成路径
-                    </p>
-</div>
-
-<div class="presentation__glass-card p-8 mb-10 border-l-4 border-blue-500">
-    <h3 style="color: gold;" class="text-2xl font-bold text-slate-200 mb-4">锚定两个方向</h3>
-    <div class="space-y-4">
-        <div>
-            <h4 class="font-bold text-blue-300 mb-2">一、供应链金融脱核方向</h4>
-            <p class="text-slate-300">引入包括银行等第三方资方，搭配使用内外部资金，小金额撬动大项目。<br>我方的价值就是提供票仓管理、数据分析等技术服务及风控能力。</p>
-        </div>
-        <div>
-            <h4 class="font-bold text-blue-300 mb-2">二、数据方向</h4>
-            <p class="text-slate-300">包括可信数据空间运营、数据标注、大模型运营、数字化服务等综合数据服务商。</p>
+            </div>
         </div>
     </div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
 
-<div class="presentation__glass-card p-6">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 rounded-lg bg-purple-900/50 flex items-center justify-center mr-4">
-<i class="fas fa-database text-2xl text-purple-400"></i>
-</div>
-<h3 class="font-bold text-xl text-slate-200">非遗数据集商业化</h3>
-</div>
-<p class="text-slate-300">
-                            完成非遗数据集收尾及结项，跨部门合作挖掘商业价值，推动三维模型成果转化。
+    <div class="fixed right-6 top-1/2 transform -translate-y-1/2 z-40 flex flex-col gap-3">
+        <div class="presentation__navigation-dot active" data-slide="0" title="封面"></div>
+        <div class="presentation__navigation-dot" data-slide="1" title="核心工作"></div>
+        <div class="presentation__navigation-dot" data-slide="2" title="主要问题"></div>
+        <div class="presentation__navigation-dot" data-slide="3" title="经营指标"></div>
+        <div class="presentation__navigation-dot" data-slide="4" title="业务商机"></div>
+        <div class="presentation__navigation-dot" data-slide="5" title="工作计划"></div>
+        <div class="presentation__navigation-dot" data-slide="6" title="协调支持"></div>
+        <div class="presentation__navigation-dot" data-slide="7" title="结论"></div>
+    </div>
+
+    <div class="fixed bottom-6 left-6 z-40 hidden md:block">
+        <div class="presentation__key-hint">
+            <i class="fas fa-keyboard"></i>
+            <span>← → 导航 | Space 播放/暂停</span>
+        </div>
+    </div>
+
+    <div id="slidesContainer">
+
+        <section class="presentation__slide active flex items-center justify-center px-4 md:px-8" id="slide0">
+            <div class="max-w-4xl w-full text-center">
+                <div class="presentation__glass-card p-8 md:p-12 mb-8 border border-blue-500/20">
+                    <h1
+                        class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+                        一季度经营分析汇报
+                    </h1>
+                    <br>
+                    <div class="h-1 w-32 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto my-8 rounded-full"></div>
+                    <br>
+                    <p class="text-2xl md:text-3xl text-slate-300 mb-4">
+                        2026年第二季度规划
+                    </p>
+                    <div class="mt-10 pt-6 border-t border-slate-700">
+                        <p class="text-xl text-slate-400">
+                            <i class="fas fa-user-tie mr-2 text-blue-400"></i>
+                            汇报人: <span class="text-blue-300 font-bold text-2xl">郑超</span>
                         </p>
-</div>
-
-<div class="presentation__glass-card p-6">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 rounded-lg bg-green-900/50 flex items-center justify-center mr-4">
-<i class="fas fa-check-double text-2xl text-green-400"></i>
-</div>
-<h3 class="font-bold text-xl text-slate-200">项目交付验收</h3>
-</div>
-<p class="text-slate-300">
-                            完成淘丁标准项目交付及验收闭环，确保客户满意度与回款进度。
+                        <p class="text-slate-500 mt-2 text-sm">
+                            <br>
+                            <i class="far fa-calendar mr-1"></i>
+                            2026年4月20日
                         </p>
-</div>
+                    </div>
+                </div>
+                <div class="mt-8 text-slate-500 text-sm animate-pulse">
+                    <i class="fas fa-chevron-down mr-2"></i>
+                    
+                </div>
+            </div>
+        </section>
 
-<div class="presentation__glass-card p-6">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 rounded-lg bg-blue-900/50 flex items-center justify-center mr-4">
-<i class="fas fa-cogs text-2xl text-blue-400"></i>
-</div>
-<h3 class="font-bold text-xl text-slate-200">平台运营与迭代</h3>
-</div>
-<p class="text-slate-300">
-                            推进三大平台持续运营，联合研发团队迭代功能，优化用户体验。
+        <section class="presentation__slide px-4 md:px-8" id="slide1">
+            <br> <br> <br> <br> <br>
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        <i class="fas fa-tasks text-blue-400 mr-3"></i>
+                        一季度核心工作完成情况
+                    </h2>
+                    <p class="text-slate-400 max-w-3xl mx-auto">
+                        产融事业部、数据产品部及团队建设在一季度取得阶段性成果
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
+
+                    <div class="presentation__glass-card p-6 border-l-4 border-blue-500">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-blue-900/50 flex items-center justify-center mr-4">
+                                <i class="fas fa-handshake text-2xl text-blue-400"></i>
+                            </div>
+                            <h3 class="font-bold text-xl text-slate-200">产融事业部</h3>
+                        </div>
+                        <ul class="space-y-3 text-slate-300">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                                <span style="color: orange;">龙江航空项目：云上文旅合作已完成签约</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                                <span>西安文旅项目：参加26年数据采购初次申报评审</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                                <span>山西华阳项目：上下游验收已完成</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                                <span style="color: orange;">星际数科项目：跨部门协同顺利结项</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                                <span>渠道线索挖掘：搜集美团、携程有效线索70条</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                                <span>可信数据空间联动：与业务拓展深度绑定</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="presentation__glass-card p-6 border-l-4 border-purple-500">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-purple-900/50 flex items-center justify-center mr-4">
+                                <i class="fas fa-database text-2xl text-purple-400"></i>
+                            </div>
+                            <h3 class="font-bold text-xl text-slate-200">数据产品部</h3>
+                        </div>
+                        <ul class="space-y-3 text-slate-300">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                                <span>三大平台交接与运维：完成基础信息交接，并开展相关运营运维业务</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                                <span style="color: orange;">可信数据空间：各生态注册入驻、工商银行可信数据空间技术对接及场景设计</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                                <span>数据资产运营交易平台：支撑西安银行授信、东亚银行授信及跑通对接并上线使用</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                                <span style="color: orange;">非遗高质量数据集：完成8个作品非遗项目的数据采集、分析、初步标注</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                                <span>材料输出：提供多项业务材料输出</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="presentation__glass-card p-6 border-l-4 border-green-500">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-green-900/50 flex items-center justify-center mr-4">
+                                <i class="fas fa-users text-2xl text-green-400"></i>
+                            </div>
+                            <h3 class="font-bold text-xl text-slate-200">团队建设</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-semibold text-slate-300 mb-2">产融事业部</h4>
+                                <p class="text-slate-300 pl-2">
+                                    <i class="fas fa-user-plus text-blue-400 mr-2"></i>
+                                    新增1名成员，已完成分工安排与业务培训
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-300 mb-2">数据产品部</h4>
+                                <p class="text-slate-300 pl-2">
+                                    <i class="fas fa-user-plus text-blue-400 mr-2"></i>
+                                    新增2名成员，职责分工明确，完成产品培训
+                                </p>
+                            </div>
+                            <div class="pt-3 border-t border-slate-700">
+                                <p class="text-slate-400 text-sm">
+                                    <i class="fas fa-lightbulb text-yellow-400 mr-1"></i>
+                                    团队新架构已进入正式业务开展阶段
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="presentation__slide px-4 md:px-8 bg-slate-800/30" id="slide2">
+            <br> <br> <br> <br> <br>
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        <i class="fas fa-exclamation-triangle text-orange-400 mr-3"></i>
+                        一季度主要问题与挑战
+                    </h2>
+                    <p class="text-slate-400 max-w-3xl mx-auto">
+                        六大核心挑战
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <div class="presentation__glass-card p-6 border-l-4 border-orange-500">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-orange-900/50 flex items-center justify-center mr-4">
+                                <i class="fas fa-sync-alt text-2xl text-orange-400"></i>
+                            </div>
+                            <h3 class="font-bold text-xl text-slate-200">组织架构调整</h3>
+                        </div>
+                        <p class="text-slate-300 leading-relaxed">
+                            组织架构调整导致原有业绩及大部分资源流失，团队需重建业务基础，虽具备多次初创团队经验，但仍面临较大压力。
                         </p>
-</div>
+                    </div>
 
-<div class="presentation__glass-card p-6">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 rounded-lg bg-cyan-900/50 flex items-center justify-center mr-4">
-<i class="fas fa-chart-network text-2xl text-cyan-400"></i>
-</div>
-<h3 class="font-bold text-xl text-slate-200">高质量数据集打造</h3>
-</div>
-<p class="text-slate-300">
-                            规划可商业化落地方案，探索跨行业数据融合，提升12大类数据集覆盖度。
+                    <div class="presentation__glass-card p-6 border-l-4 border-yellow-500">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-yellow-900/50 flex items-center justify-center mr-4">
+                                <i class="fas fa-users text-2xl text-yellow-400"></i>
+                            </div>
+                            <h3 class="font-bold text-xl text-slate-200">全新团队需快速成长</h3>
+                        </div>
+                        <p class="text-slate-300 leading-relaxed">
+                            团队全员为新人，业务岗仅1人，尚未形成作战能力，短期内难以独立承担复杂项目执行。
                         </p>
-</div>
+                    </div>
 
-<div class="presentation__glass-card p-6">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 rounded-lg bg-pink-900/50 flex items-center justify-center mr-4">
-<i class="fas fa-bullhorn text-2xl text-pink-400"></i>
-</div>
-<h3 class="font-bold text-xl text-slate-200">品牌营销与赋能</h3>
-</div>
-<p class="text-slate-300">
-                            打造可信数据空间品牌形象，开展案例包装、媒体宣传与线下展示，协助一线制定营销方案。
+                    <div class="presentation__glass-card p-6 border-l-4 border-red-500">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-red-900/50 flex items-center justify-center mr-4">
+                                <i class="fas fa-money-bill-wave text-2xl text-red-400"></i>
+                            </div>
+                            <h3 class="font-bold text-xl text-slate-200">股权变更带来资金使用挑战</h3>
+                        </div>
+                        <p class="text-slate-300 leading-relaxed">
+                            当前KPI的底层逻辑还是靠供应链，产融业务处于脱核过渡期，脱离云创后平台融资使用难度较大，外部资金引入则会稀释利润。
                         </p>
-</div>
+                    </div>
 
-<div class="presentation__glass-card p-6">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 rounded-lg bg-pink-900/50 flex items-center justify-center mr-4">
-<i class="fas fa-bullhorn text-2xl text-pink-400"></i>
-</div>
-<h3 style="color: gold;" class="font-bold text-xl text-slate-200">跑通小龙虾及爱马仕</h3>
-</div>
-<p class="text-slate-300">
-        一季度建立了团队的IMA知识库，起到非常大的作用，已经使用在团队协作中。<br>
-        二季度继续通过AI提高生产效率，包括应用在数据采集、行业分析、风控管理等多个领域。
-</p>
-</div>
+                    <div class="presentation__glass-card p-6 border-l-4 border-purple-500">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-purple-900/50 flex items-center justify-center mr-4">
+                                <i class="fas fa-cloud text-2xl text-purple-400"></i>
+                            </div>
+                            <h3 class="font-bold text-xl text-slate-200">高度依赖云创科技能力</h3>
+                        </div>
+                        <p class="text-slate-300 leading-relaxed">
+                            信息/数字化业务高度依赖云创技术科技能力，跨公司协调资源难度持续加大，影响项目响应效率与自主性。
+                        </p>
+                    </div>
 
-</div>
-</div>
-</section>
+                    <div class="presentation__glass-card p-6 border-l-4 border-blue-500">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-blue-900/50 flex items-center justify-center mr-4">
+                                <i class="fas fa-project-diagram text-2xl text-blue-400"></i>
+                            </div>
+                            <h3 class="font-bold text-xl text-slate-200">缺乏协同机制</h3>
+                        </div>
+                        <p class="text-slate-300 leading-relaxed">
+                            内部协同机制缺失，多部门共同参与项目无业绩分享制度，贡献难以量化，影响协作积极性。
+                        </p>
+                    </div>
 
-<section class="presentation__slide px-4 md:px-8 bg-slate-800/30" id="slide6">
-<br><br><br><br> <br> <br> <br>
-<div class="max-w-6xl mx-auto">
-<div class="text-center mb-12">
-<h2 class="text-3xl md:text-4xl font-bold mb-4">
-<i class="fas fa-hands-helping text-indigo-400 mr-3"></i>
+                    <div class="presentation__glass-card p-6 border-l-4 border-gray-500">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-gray-900/50 flex items-center justify-center mr-4">
+                                <i class="fas fa-user-clock text-2xl text-gray-400"></i>
+                            </div>
+                            <h3 class="font-bold text-xl text-slate-200">个人精力挑战</h3>
+                        </div>
+                        <p class="text-slate-300 leading-relaxed">
+                            个人需同时兼顾290万业绩目标及平台/数据运营职责，精力分散，难以全面兼顾各项任务。
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-10 text-center text-slate-500 text-sm">
+                    <i class="fas fa-info-circle mr-2"></i>
+                    汇报人:郑超
+                </div>
+            </div>
+        </section>
+
+        <section class="presentation__slide px-4 md:px-8" id="slide3">
+            <br>
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        <i class="fas fa-bullseye text-green-400 mr-3"></i>
+                        二季度核心经营指标
+                    </h2>
+                    <p class="text-slate-400 max-w-3xl mx-auto">
+                        基于公司要求设定的关键绩效目标<span style="color: gold;">（时间过半、任务过半）</span>
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
+
+                    <div class="presentation__glass-card p-8 text-center">
+                        <div
+                            class="w-20 h-20 rounded-full bg-green-900/50 flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-chart-line text-3xl text-green-400"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-200 mb-2">毛利目标（年290万）</h3>
+                        <div class="text-4xl font-bold text-green-400 mb-4">145万元</div>
+                        <p class="text-slate-400">核心考核指标，任务过半</p>
+                    </div>
+
+                    <div class="presentation__glass-card p-8 text-center">
+                        <div
+                            class="w-20 h-20 rounded-full bg-blue-900/50 flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-money-bill-wave text-3xl text-blue-400"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-200 mb-2">收入目标（年1000万）</h3>
+                        <div class="text-4xl font-bold text-blue-400 mb-4">500万元</div>
+                        <p class="text-slate-400">总体收入要求</p>
+                    </div>
+
+                    <div class="presentation__glass-card p-8 text-center">
+                        <div
+                            class="w-20 h-20 rounded-full bg-amber-900/50 flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-calculator text-3xl text-amber-400"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-200 mb-2">预计可实现毛利</h3>
+                        <div class="text-4xl font-bold text-amber-400 mb-4">60万元</div>
+                        <p class="text-slate-400">基于当前商机测算</p>
+                    </div>
+                </div>
+
+                <div class="presentation__glass-card p-6 mb-8">
+                    <div class="flex flex-col md:flex-row items-center justify-between mb-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-200 mb-2">毛利缺口分析</h3>
+                            <p class="text-slate-400">基于当前商机测算，存在约 <span
+                                    class="text-red-400 font-bold">75-100万元缺口</span></p>
+                        </div>
+                        <div class="mt-4 md:mt-0">
+                            <div class="flex items-center gap-4">
+                                <div class="flex items-center">
+                                    <div class="w-4 h-4 bg-green-500 rounded mr-2"></div>
+                                    <span class="text-sm text-slate-400">预计实现</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-4 h-4 bg-red-500 rounded mr-2"></div>
+                                    <span class="text-sm text-slate-400">缺口</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="presentation__chart-container">
+                        <div id="profitGapChart" style="height: 300px;"></div>
+                    </div>
+                </div>
+                <div class="presentation__glass-card p-6 border-l-4 border-red-500">
+                    <div class="flex items-start">
+                        <i class="fas fa-exclamation-circle text-red-400 text-xl mt-1 mr-4"></i>
+                        <div>
+                            <p class="text-slate-300">
+                                在理想情况下（资金匹配、上会通过），所有储备项目均可落地，预计实现毛利70万元。悲观情况下预计完成40万元毛利。<br>
+                                <span class="font-bold text-red-300">仍需团队持续挖掘新商机以填补75万元毛利缺口。</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="presentation__slide px-4 md:px-8 bg-slate-800/30" id="slide4">
+            <br> <br>
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        <i class="fas fa-briefcase text-cyan-400 mr-3"></i>
+                        二季度业务商机一览表
+                    </h2>
+                    <p class="text-slate-400 max-w-3xl mx-auto">
+                        现有储备项目数量充足，转化是关键瓶颈
+                    </p>
+                </div>
+                <div class="presentation__glass-card p-6 mb-8 overflow-x-auto">
+                    <table class="w-full text-slate-300">
+                        <thead>
+                            <tr class="border-b border-slate-700">
+                                <th class="py-4 px-4 text-left font-semibold">项目名称</th>
+                                <th class="py-4 px-4 text-left font-semibold">项目类型</th>
+                                <th class="py-4 px-4 text-left font-semibold">资金需求</th>
+                                <th class="py-4 px-4 text-left font-semibold">项目预计总收入/利润</th>
+                                <th class="py-4 px-4 text-left font-semibold">预计二季度收入</th>
+                                <th class="py-4 px-4 text-left font-semibold">二季度毛利</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-slate-800 hover:bg-slate-800/50 transition-colors">
+                                <td class="py-4 px-4 font-medium">云上-龙江项目</td>
+                                <td class="py-4 px-4">
+                                    <span
+                                        class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm">存量项目</span>
+                                </td>
+                                <td class="py-4 px-4">/</td>
+                                <td class="py-4 px-4">120万/60万</td>
+                                <td class="py-4 px-4">25万</td>
+                                <td class="py-4 px-4 font-bold text-green-400">15万</td>
+                            </tr>
+                            <tr class="border-b border-slate-800 hover:bg-slate-800/50 transition-colors">
+                                <td class="py-4 px-4 font-medium">山西华阳</td>
+                                <td class="py-4 px-4">
+                                    <span
+                                        class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm">存量项目</span>
+                                </td>
+                                <td class="py-4 px-4">/</td>
+                                <td class="py-4 px-4">3326.5万/40万</td>
+                                <td class="py-4 px-4">1380.5万</td>
+                                <td class="py-4 px-4 font-bold text-green-400">20万</td>
+                            </tr>
+                            <tr class="border-b border-slate-800 hover:bg-slate-800/50 transition-colors">
+                                <td class="py-4 px-4 font-medium">景区/酒店场景</td>
+                                <td class="py-4 px-4">
+                                    <span
+                                        class="px-3 py-1 bg-amber-900/50 text-amber-300 rounded-full text-sm">储备</span>
+                                </td>
+                                <td style="color: red;" class="py-4 px-4">5000万</td>
+                                <td class="py-4 px-4">300万/150万</td>
+                                <td class="py-4 px-4">80万</td>
+                                <td class="py-4 px-4 font-bold text-amber-400">20万</td>
+                            </tr>
+                            <tr class="border-b border-slate-800 hover:bg-slate-800/50 transition-colors">
+                                <td class="py-4 px-4 font-medium">旅行社场景</td>
+                                <td class="py-4 px-4">
+                                    <span
+                                        class="px-3 py-1 bg-amber-900/50 text-amber-300 rounded-full text-sm">储备</span>
+                                </td>
+                                <td style="color: red;" class="py-4 px-4">500万</td>
+                                <td class="py-4 px-4">25万/15万</td>
+                                <td class="py-4 px-4">/</td>
+                                <td class="py-4 px-4">/</td>
+                            </tr>
+                            <tr class="border-b border-slate-800 hover:bg-slate-800/50 transition-colors">
+                                <td class="py-4 px-4 font-medium">航空出行场景</td>
+                                <td class="py-4 px-4">
+                                    <span
+                                        class="px-3 py-1 bg-amber-900/50 text-amber-300 rounded-full text-sm">储备</span>
+                                </td>
+                                <td style="color: red;" class="py-4 px-4">5000万</td>
+                                <td class="py-4 px-4">300万/150万</td>
+                                <td class="py-4 px-4">80万</td>
+                                <td class="py-4 px-4 font-bold text-amber-400">20万</td>
+                            </tr>
+                            <tr class="border-b border-slate-800 hover:bg-slate-800/50 transition-colors">
+                                <td class="py-4 px-4 font-medium">西安市文旅局提升项目-优化需求</td>
+                                <td class="py-4 px-4">
+                                    <span
+                                        class="px-3 py-1 bg-amber-900/50 text-amber-300 rounded-full text-sm">储备</span>
+                                </td>
+                                <td class="py-4 px-4">/</td>
+                                <td class="py-4 px-4">10万/7万</td>
+                                <td class="py-4 px-4">5万</td>
+                                <td class="py-4 px-4 font-bold text-amber-400">5万</td>
+                            </tr>
+                            <tr class="border-b border-slate-800 hover:bg-slate-800/50 transition-colors">
+                                <td class="py-4 px-4 font-medium">新疆博观模型合作</td>
+                                <td class="py-4 px-4">
+                                    <span
+                                        class="px-3 py-1 bg-amber-900/50 text-amber-300 rounded-full text-sm">储备</span>
+                                </td>
+                                <td class="py-4 px-4">/</td>
+                                <td class="py-4 px-4">35万/10万</td>
+                                <td class="py-4 px-4">5万</td>
+                                <td class="py-4 px-4 font-bold text-amber-400">5万</td>
+                            </tr>
+                            <tr class="border-b border-slate-800 hover:bg-slate-800/50 transition-colors">
+                                <td class="py-4 px-4 font-medium">出行+AI+文旅项目</td>
+                                <td class="py-4 px-4">
+                                    <span
+                                        class="px-3 py-1 bg-amber-900/50 text-amber-300 rounded-full text-sm">储备</span>
+                                </td>
+                                <td class="py-4 px-4">/</td>
+                                <td class="py-4 px-4">/</td>
+                                <td class="py-4 px-4">/</td>
+                                <td class="py-4 px-4">/</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition-colors">
+                                <td class="py-4 px-4 font-medium">挖掘豆荚合作</td>
+                                <td class="py-4 px-4">
+                                    <span
+                                        class="px-3 py-1 bg-amber-900/50 text-amber-300 rounded-full text-sm">储备</span>
+                                </td>
+                                <td class="py-4 px-4">/</td>
+                                <td class="py-4 px-4">/</td>
+                                <td class="py-4 px-4">/</td>
+                                <td class="py-4 px-4">/</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition-colors">
+                                <td class="py-4 px-4 font-medium">陕西文创协会园区合作</td>
+                                <td class="py-4 px-4">
+                                    <span class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm">储备</span>
+                                </td>
+                                <td class="py-4 px-4">/</td>
+                                <td class="py-4 px-4">/</td>
+                                <td class="py-4 px-4">/</td>
+                                <td class="py-4 px-4">/</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/50 transition-colors">
+                                <td class="py-4 px-4 font-medium">拓展新商机</td>
+                                <td class="py-4 px-4">
+                                    <span class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm">拓展</span>
+                                </td>
+                                <td class="py-4 px-4">/</td>
+                                <td class="py-4 px-4">/</td>
+                                <td class="py-4 px-4">/</td>
+                                <td class="py-4 px-4">/</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="presentation__glass-card p-6 border-l-4 border-cyan-500">
+                    <div class="flex items-start">
+                        <i class="fas fa-chart-bar text-cyan-400 text-xl mt-1 mr-4"></i>
+                        <div>
+                            <h4 class="font-bold text-slate-200 mb-2">商机分析摘要</h4>
+                            <p class="text-slate-300">
+                                现有储备项目数量够2季度的工作量，转化是关键瓶颈。<span class="text-red-400 font-bold">重点突破"景区酒店场景"、"航空出行场景"等高潜力方向</span>，力争填补75万元毛利缺口。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="presentation__slide px-4 md:px-8" id="slide5">
+            <br> 
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        <i class="fas fa-clipboard-list text-purple-400 mr-3"></i>
+                        二季度重点工作计划
+                    </h2>
+                    <p class="text-slate-400 max-w-3xl mx-auto">
+                        数据产品部将聚焦六大核心任务，围绕目标达成路径
+                    </p>
+                </div>
+
+                <div class="presentation__glass-card p-8 mb-10 border-l-4 border-blue-500">
+                    <h3 style="color: gold;" class="text-2xl font-bold text-slate-200 mb-4">锚定两个方向</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-bold text-blue-300 mb-2">一、供应链金融脱核方向</h4>
+                            <p class="text-slate-300">引入包括银行等第三方资方，搭配使用内外部资金，小金额撬动大项目。<br>我方核心价值是提供<span class="text-red-400 font-bold">行业的理解运营、票仓管理、数据分析等技术服务及风控能力</span>。
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-blue-300 mb-2">二、数据方向</h4>
+                            <p class="text-slate-300">包括<span class="text-red-400 font-bold">可信数据空间运营、数据标注、大模型运营、数字化服务</span>等综合数据服务商。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+
+                    <div class="presentation__glass-card p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-purple-900/50 flex items-center justify-center mr-4">
+                                <i class="fas fa-database text-2xl text-purple-400"></i>
+                            </div>
+                            <h3 class="font-bold text-xl text-slate-200">非遗数据集商业化</h3>
+                        </div>
+                        <p class="text-slate-300">
+                            完成非遗数据集收尾及结项，跨部门合作挖掘商业价值。
+                        </p>
+                    </div>
+
+                    <div class="presentation__glass-card p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-green-900/50 flex items-center justify-center mr-4">
+                                <i class="fas fa-check-double text-2xl text-green-400"></i>
+                            </div>
+                            <h3 class="font-bold text-xl text-slate-200">数据标注业务落地积累经验</h3>
+                        </div>
+                        <p class="text-slate-300">
+                            完成淘丁标准项目交付及验收闭环，确保客户满意度与回款进度。通过项目积累数据标注业务经验，打通上下游供应链。
+                        </p>
+                    </div>
+
+                    <div class="presentation__glass-card p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-blue-900/50 flex items-center justify-center mr-4">
+                                <i class="fas fa-cogs text-2xl text-blue-400"></i>
+                            </div>
+                            <h3 class="font-bold text-xl text-slate-200">三大平台运营</h3>
+                        </div>
+                        <p class="text-slate-300">
+                            推进三大平台持续运营与运维，联合云创研发团队迭代功能，优化用户体验。
+                        </p>
+                    </div>
+
+                    <div class="presentation__glass-card p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-cyan-900/50 flex items-center justify-center mr-4">
+                                <i class="fas fa-chart-network text-2xl text-cyan-400"></i>
+                            </div>
+                            <h3 class="font-bold text-xl text-slate-200">高质量数据集打造</h3>
+                        </div>
+                        <p class="text-slate-300">
+                            规划更多可商业化落地场景，探索跨行业数据融合，提升12大类数据集覆盖度。
+                        </p>
+                    </div>
+
+                    <div class="presentation__glass-card p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-pink-900/50 flex items-center justify-center mr-4">
+                                <i class="fas fa-bullhorn text-2xl text-pink-400"></i>
+                            </div>
+                            <h3 class="font-bold text-xl text-slate-200">营销与赋能</h3>
+                        </div>
+                        <p class="text-slate-300">
+                            通过会展、自媒体宣传等渠道，开展案例打造、宣传与线下展示，并协助一线制定营销方案。
+                        </p>
+                    </div>
+
+                    <div class="presentation__glass-card p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-pink-900/50 flex items-center justify-center mr-4">
+                                <i class="fas fa-bullhorn text-2xl text-pink-400"></i>
+                            </div>
+                            <h3 style="color: gold;" class="font-bold text-xl text-slate-200">跑通小龙虾/爱马仕</h3>
+                        </div>
+                        <p class="text-slate-300">
+                            一季度建立了团队的IMA知识库，起到非常大的作用，已经使用在团队协作中。<br>
+                            二季度继续通过AI(龙虾、Hermes)提高生产效率，包括应用在数据采集、行业分析、风控管理等多个领域。
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="presentation__slide px-4 md:px-8 bg-slate-800/30" id="slide6">
+            <br><br><br><br> <br> <br> <br>
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        <i class="fas fa-hands-helping text-indigo-400 mr-3"></i>
                         需公司协调支持事项
                     </h2>
-<p class="text-slate-400 max-w-3xl mx-auto">
+                    <p class="text-slate-400 max-w-3xl mx-auto">
                         为保障战略创新与经营目标同步落地，提出三项支持请求
                     </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
 
-<div class="presentation__glass-card p-6">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 rounded-lg bg-indigo-900/50 flex items-center justify-center mr-4">
-<i class="fas fa-users-cog text-2xl text-indigo-400"></i>
-</div>
-<h3 class="font-bold text-xl text-slate-200">建立协同与分享机制</h3>
-</div>
-<p class="text-slate-300" style="font-size: 16px;">
+                    <div class="presentation__glass-card p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-indigo-900/50 flex items-center justify-center mr-4">
+                                <i class="fas fa-users-cog text-2xl text-indigo-400"></i>
+                            </div>
+                            <h3 class="font-bold text-xl text-slate-200">建立协同与分享机制</h3>
+                        </div>
+                        <p class="text-slate-300" style="font-size: 16px;">
                             建立健全内部跨部门协同与业绩分享机制，以制度保障促进协作与价值认可。
                         </p>
-</div>
+                    </div>
 
-<div class="presentation__glass-card p-6">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 rounded-lg bg-teal-900/50 flex items-center justify-center mr-4">
-<i class="fas fa-user-tag text-2xl text-teal-400"></i>
-</div>
-<h3 class="font-bold text-xl text-slate-200">提升云创业务协同效率</h3>
-</div>
-<p class="text-slate-300" style="font-size: 16px;">
+                    <div class="presentation__glass-card p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-teal-900/50 flex items-center justify-center mr-4">
+                                <i class="fas fa-user-tag text-2xl text-teal-400"></i>
+                            </div>
+                            <h3 class="font-bold text-xl text-slate-200">提升云创业务协同效率</h3>
+                        </div>
+                        <p class="text-slate-300" style="font-size: 16px;">
                             建议相关人员在云创任职或兼职，可直接运营云创业务，提升资源协调效率。
                         </p>
-</div>
+                    </div>
 
-<div class="presentation__glass-card p-6">
-<div class="flex items-center mb-4">
-<div class="w-12 h-12 rounded-lg bg-amber-900/50 flex items-center justify-center mr-4">
-<i class="fas fa-balance-scale text-2xl text-amber-400"></i>
-</div>
-<h3 class="font-bold text-xl text-slate-200">创新与KPI平衡资源配置</h3>
-</div>
-<p class="text-slate-300" style="font-size: 16px;">
+                    <div class="presentation__glass-card p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-amber-900/50 flex items-center justify-center mr-4">
+                                <i class="fas fa-balance-scale text-2xl text-amber-400"></i>
+                            </div>
+                            <h3 class="font-bold text-xl text-slate-200">创新与KPI平衡资源配置</h3>
+                        </div>
+                        <p class="text-slate-300" style="font-size: 16px;">
                             建议采用"30%创新探索 + 70%稳增长"资源配置模式，平衡风险与回报，确保KPI达成。
                         </p>
-</div>
-</div>
+                    </div>
+                </div>
 
-</div>
-</section>
+            </div>
+        </section>
 
-<section class="presentation__slide px-4 md:px-8" id="slide7">
-     <br> <br> <br> <br> <br>
-<div class="max-w-4xl mx-auto text-center">
-<div class="presentation__glass-card p-10 mb-10">
-<div class="w-24 h-24 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mx-auto mb-8">
-<i class="fas fa-flag-checkered text-4xl text-white"></i>
-</div>
-<h2 class="text-3xl md:text-4xl font-bold mb-6">
-                感谢聆听与支持
+        <section class="presentation__slide px-4 md:px-8" id="slide7">
+            <br> <br> <br> <br> <br>
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="presentation__glass-card p-10 mb-10">
+                    <div
+                        class="w-24 h-24 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mx-auto mb-8">
+                        <i class="fas fa-flag-checkered text-4xl text-white"></i>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        感谢聆听与支持
                     </h2>
 
-<div class="pt-8 border-t border-slate-700">
-<p class="text-slate-400 mb-6">
-                            产融事业部   数据产品部
+                    <div class="pt-8 border-t border-slate-700">
+                        <p class="text-slate-400 mb-6">
+                            产融事业部 数据产品部
                         </p>
-<div class="text-2xl font-bold text-slate-300">
-<i class="fas fa-user-tie text-blue-400 mr-3"></i>
+                        <div class="text-2xl font-bold text-slate-300">
+                            <i class="fas fa-user-tie text-blue-400 mr-3"></i>
                             汇报人: 郑超
                         </div>
-<p class="text-slate-500 mt-4 text-sm">
-<i class="far fa-calendar mr-1"></i>
-                            2026年4月18日
+                        <p class="text-slate-500 mt-4 text-sm">
+                            <i class="far fa-calendar mr-1"></i>
+                            2026年4月20日
                         </p>
-</div>
-</div>
-<div class="text-slate-500 text-sm">
-<i class="fas mr-2"></i>
+                    </div>
+                </div>
+                <div class="text-slate-500 text-sm">
+                    <i class="fas mr-2"></i>
                     西部国家版权交易中心有限责任公司 / 陕西智汇数据资产服务有限公司
                 </div>
-</div>
-</section>
-</div>
+            </div>
+        </section>
+    </div>
 
-<footer class="bg-slate-900 border-t border-slate-800 py-6 px-4 text-center">
-<div class="max-w-4xl mx-auto">
-<p class="text-slate-500 text-sm mb-4">
-                
-            </p>
-<p class="text-slate-600 text-xs">
-                
-            </p>
-</div>
-</footer>
+    <footer class="bg-slate-900 border-t border-slate-800 py-6 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <p class="text-slate-500 text-sm mb-4">
 
-<script>
+            </p>
+            <p class="text-slate-600 text-xs">
+
+            </p>
+        </div>
+    </footer>
+
+    <script>
         // 粒子背景效果
         function initParticles() {
             const canvas = document.getElementById('particlesCanvas');
             const ctx = canvas.getContext('2d');
-            
+
             // 设置画布尺寸
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
-            
+
             const particles = [];
             const particleCount = 80;
-            
+
             // 创建粒子
             for (let i = 0; i < particleCount; i++) {
                 particles.push({
@@ -854,21 +897,21 @@
                     opacity: Math.random() * 0.5 + 0.1
                 });
             }
-            
+
             // 绘制粒子
             function drawParticles() {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
-                
+
                 // 绘制连接线
                 for (let i = 0; i < particles.length; i++) {
                     for (let j = i + 1; j < particles.length; j++) {
                         const dx = particles[i].x - particles[j].x;
                         const dy = particles[i].y - particles[j].y;
                         const distance = Math.sqrt(dx * dx + dy * dy);
-                        
+
                         if (distance < 100) {
                             ctx.beginPath();
-                            ctx.strokeStyle = `rgba(100, 150, 255, ${0.1 * (1 - distance/100)})`;
+                            ctx.strokeStyle = `rgba(100, 150, 255, ${0.1 * (1 - distance / 100)})`;
                             ctx.lineWidth = 0.5;
                             ctx.moveTo(particles[i].x, particles[i].y);
                             ctx.lineTo(particles[j].x, particles[j].y);
@@ -876,84 +919,84 @@
                         }
                     }
                 }
-                
+
                 // 绘制粒子
                 particles.forEach(particle => {
                     ctx.beginPath();
                     ctx.fillStyle = `rgba(100, 150, 255, ${particle.opacity})`;
                     ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
                     ctx.fill();
-                    
+
                     // 更新粒子位置
                     particle.x += particle.speedX;
                     particle.y += particle.speedY;
-                    
+
                     // 边界检查
                     if (particle.x > canvas.width) particle.x = 0;
                     if (particle.x < 0) particle.x = canvas.width;
                     if (particle.y > canvas.height) particle.y = 0;
                     if (particle.y < 0) particle.y = canvas.height;
                 });
-                
+
                 requestAnimationFrame(drawParticles);
             }
-            
+
             drawParticles();
-            
+
             // 窗口大小调整时重置画布
             window.addEventListener('resize', () => {
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
             });
         }
-        
+
         // 幻灯片导航系统
         let currentSlide = 0;
         const slides = document.querySelectorAll('.presentation__slide');
         const dots = document.querySelectorAll('.presentation__navigation-dot');
         const progressFill = document.getElementById('progressFill');
-        
+
         function updateSlide(index) {
             // 确保索引在有效范围内
             if (index < 0) index = 0;
             if (index >= slides.length) index = slides.length - 1;
-            
+
             // 更新当前幻灯片
             currentSlide = index;
-            
+
             // 隐藏所有幻灯片
             slides.forEach(slide => {
                 slide.classList.remove('active');
             });
-            
+
             // 显示当前幻灯片
             slides[currentSlide].classList.add('active');
-            
+
             // 更新导航点
             dots.forEach((dot, i) => {
                 dot.classList.toggle('active', i === currentSlide);
             });
-            
+
             // 更新进度条
             const progress = ((currentSlide + 1) / slides.length) * 100;
             progressFill.style.width = `${progress}%`;
-            
+
             // 滚动到当前幻灯片
             slides[currentSlide].scrollIntoView({ behavior: 'smooth', block: 'start' });
-            
+
             // 初始化当前幻灯片中的图表
             if (currentSlide === 3) {
                 initProfitGapChart();
             }
         }
-        
+
         // 初始化毛利缺口图表
         function initProfitGapChart() {
             const chartDom = document.getElementById('profitGapChart');
             if (!chartDom) return;
-            
+
             const chart = echarts.init(chartDom);
-            
+
             const option = {
                 tooltip: {
                     trigger: 'axis',
@@ -1014,13 +1057,13 @@
                                 }
                             },
                             {
-                                value: 45,
+                                value: 60,
                                 itemStyle: {
                                     color: '#f59e0b'
                                 }
                             },
                             {
-                                value: 100,
+                                value: 85,
                                 itemStyle: {
                                     color: '#ef4444'
                                 }
@@ -1037,18 +1080,18 @@
                     }
                 ]
             };
-            
+
             chart.setOption(option);
-            
+
             // 窗口大小调整时重新调整图表
             window.addEventListener('resize', () => {
                 chart.resize();
             });
         }
-        
+
         // 键盘导航
         document.addEventListener('keydown', (e) => {
-            switch(e.key) {
+            switch (e.key) {
                 case 'ArrowRight':
                 case ' ':
                     e.preventDefault();
@@ -1068,23 +1111,23 @@
                     break;
             }
         });
-        
+
         // 导航点点击事件
         dots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
                 updateSlide(index);
             });
         });
-        
+
         // 滚动事件 - 改为基于滚动位置的幻灯片切换
         let isScrolling = false;
         let scrollTimeout;
-        
+
         window.addEventListener('wheel', (e) => {
             if (isScrolling) return;
-            
+
             isScrolling = true;
-            
+
             // 判断滚动方向
             if (e.deltaY > 0) {
                 // 向下滚动
@@ -1093,27 +1136,27 @@
                 // 向上滚动
                 updateSlide(currentSlide - 1);
             }
-            
+
             // 设置防抖
             clearTimeout(scrollTimeout);
             scrollTimeout = setTimeout(() => {
                 isScrolling = false;
             }, 800);
         }, { passive: true });
-        
+
         // 触摸滑动支持
         let touchStartY = 0;
-        
+
         document.addEventListener('touchstart', (e) => {
             touchStartY = e.touches[0].clientY;
         }, { passive: true });
-        
+
         document.addEventListener('touchend', (e) => {
             if (!touchStartY) return;
-            
+
             const touchEndY = e.changedTouches[0].clientY;
             const diffY = touchStartY - touchEndY;
-            
+
             // 滑动距离超过50px才触发
             if (Math.abs(diffY) > 50) {
                 if (diffY > 0) {
@@ -1124,15 +1167,15 @@
                     updateSlide(currentSlide - 1);
                 }
             }
-            
+
             touchStartY = 0;
         }, { passive: true });
-        
+
         // 页面加载完成后初始化
         document.addEventListener('DOMContentLoaded', () => {
             initParticles();
             updateSlide(0);
-            
+
             // 添加初始动画
             setTimeout(() => {
                 document.querySelectorAll('.presentation__glass-card').forEach((card, index) => {
@@ -1143,4 +1186,5 @@
         });
     </script>
 </body>
+
 </html>
